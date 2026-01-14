@@ -1,0 +1,17 @@
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\bin\Debug\net9.0\BattleOfEmbers.exe
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\bin\Debug\net9.0\BattleOfEmbers.deps.json
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\bin\Debug\net9.0\BattleOfEmbers.runtimeconfig.json
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\bin\Debug\net9.0\BattleOfEmbers.dll
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\bin\Debug\net9.0\BattleOfEmbers.pdb
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\bin\Debug\net9.0\SplashKitSDK.dll
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\BattleOfEmbers.csproj.AssemblyReference.cache
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\BattleOfEmbers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\BattleOfEmbers.AssemblyInfoInputs.cache
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\BattleOfEmbers.AssemblyInfo.cs
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\BattleOfEmbers.csproj.CoreCompileInputs.cache
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\BattleOf.AD98BD9D.Up2Date
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\BattleOfEmbers.dll
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\refint\BattleOfEmbers.dll
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\BattleOfEmbers.pdb
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\BattleOfEmbers.genruntimeconfig.cache
+C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\ref\BattleOfEmbers.dll

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "fmJetHP0l8k=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\BattleOfEmbers\\BattleOfEmbers.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Charl\\.nuget\\packages\\splashkit\\1.3.0\\splashkit.1.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
