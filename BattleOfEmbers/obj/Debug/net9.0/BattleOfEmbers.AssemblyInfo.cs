@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BattleOfEmbers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3a259e1c5ab76ef198b237e95a6e3ff646b3cac")]
 [assembly: System.Reflection.AssemblyProductAttribute("BattleOfEmbers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BattleOfEmbers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
