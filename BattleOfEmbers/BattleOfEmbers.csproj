@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Auios.QuadTree" Version="1.2.0" />
     <PackageReference Include="SplashKit" Version="1.3.0" />
   </ItemGroup>
 

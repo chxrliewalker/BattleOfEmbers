@@ -2,6 +2,27 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "Auios.QuadTree/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Auios.Rectangle": "1.0.1"
+        },
+        "compile": {
+          "lib/net8.0/Auios.QuadTree.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Auios.QuadTree.dll": {}
+        }
+      },
+      "Auios.Rectangle/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Auios.Rectangle.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Auios.Rectangle.dll": {}
+        }
+      },
       "SplashKit/1.3.0": {
         "type": "package",
         "compile": {
@@ -14,6 +35,35 @@
     }
   },
   "libraries": {
+    "Auios.QuadTree/1.2.0": {
+      "sha512": "9UY7nnKEVtPeo6LdkvVMtsWoUGyklvdHbeWa47WAM+mSamHMHODpIg/rHvir6ukQyVPaq1p68HIo9416IIRjbw==",
+      "type": "package",
+      "path": "auios.quadtree/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "Logo.png",
+        "README.md",
+        "auios.quadtree.1.2.0.nupkg.sha512",
+        "auios.quadtree.nuspec",
+        "lib/net8.0/Auios.QuadTree.dll"
+      ]
+    },
+    "Auios.Rectangle/1.0.1": {
+      "sha512": "SL3LWB375pmSEjETsTaKnyOtifGpAiW/oOKR/asuZxFpO7LGlprpe8Dg0HQhvcDke33iHMyXu8GcL/IFUeaqtQ==",
+      "type": "package",
+      "path": "auios.rectangle/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "Logo.png",
+        "auios.rectangle.1.0.1.nupkg.sha512",
+        "auios.rectangle.nuspec",
+        "lib/netcoreapp3.1/Auios.Rectangle.dll"
+      ]
+    },
     "SplashKit/1.3.0": {
       "sha512": "AgcNLd1RSHXRwWcuuYwTbRy8LuQVRx2CbhFoVVbFBX5nuM2+4MLwAP1LR94SnfjNifqNeTlvNOb9T89e2Zrz7A==",
       "type": "package",
@@ -34,6 +84,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Auios.QuadTree >= 1.2.0",
       "SplashKit >= 1.3.0"
     ]
   },
@@ -43,11 +94,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\BattleOfEmbers\\BattleOfEmbers.csproj",
+      "projectUniqueName": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\Battleofembers\\BattleOfEmbers.csproj",
       "projectName": "BattleOfEmbers",
-      "projectPath": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\BattleOfEmbers\\BattleOfEmbers.csproj",
+      "projectPath": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\Battleofembers\\BattleOfEmbers.csproj",
       "packagesPath": "C:\\Users\\Charl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\BattleOfEmbers\\obj\\",
+      "outputPath": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\Battleofembers\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Charl\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -80,6 +131,10 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "Auios.QuadTree": {
+            "target": "Package",
+            "version": "[1.2.0, )"
+          },
           "SplashKit": {
             "target": "Package",
             "version": "[1.3.0, )"
@@ -101,7 +156,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

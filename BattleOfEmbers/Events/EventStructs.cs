@@ -2,17 +2,23 @@ using System.Drawing;
 using SplashKitSDK;
 namespace BattleOfEmbers.Events
 {
+    using BattleOfEmbers.Characters;
     using BattleOfEmbers.Core;
     public interface IBaseCollision
     {
-        IGameObject Initiator { get; }
-        IGameObject Receiver { get; }
+        ICharacter FirstObject { get; }
+        ICharacter SecondObject { get; }
     }
     public struct BaseCollisionInfo : IBaseCollision
     {
         
-        public IGameObject Initiator { get; init; }
-        public IGameObject Receiver { get; init; }
+        public ICharacter FirstObject { get; init; }
+        public ICharacter SecondObject { get; init; }
+
+        public BaseCollisionInfo(ICharacter ch1, ICharacter ch2)
+        {
+            FirstObject = ch1; SecondObject = ch2;
+        }
     }
     public struct HitCollision : IBaseCollision
     {
@@ -46,3 +52,9 @@ namespace BattleOfEmbers.Events
         bool Added { get; }
     }
 }
+
+
+// Collision Structs ------------------------
+
+
+public interface IBaseCollision
