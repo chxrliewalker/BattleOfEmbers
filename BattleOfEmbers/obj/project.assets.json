@@ -94,11 +94,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\Battleofembers\\BattleOfEmbers.csproj",
+      "projectUniqueName": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\BattleOfEmbers\\BattleOfEmbers.csproj",
       "projectName": "BattleOfEmbers",
-      "projectPath": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\Battleofembers\\BattleOfEmbers.csproj",
+      "projectPath": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\BattleOfEmbers\\BattleOfEmbers.csproj",
       "packagesPath": "C:\\Users\\Charl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\Battleofembers\\obj\\",
+      "outputPath": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\BattleOfEmbers\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Charl\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -156,7 +156,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
