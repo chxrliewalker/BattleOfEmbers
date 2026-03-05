@@ -40,6 +40,11 @@ namespace BattleOfEmbers.States
             // - more efficient: O(n^2) = checking for all objects in each update method..
             // O(log(n)) closer to with manager
             // - Scalable with increased number of objects within a game
+
+
+
+
+            
         }
         public void Exit(GameObjectBase character)
         {

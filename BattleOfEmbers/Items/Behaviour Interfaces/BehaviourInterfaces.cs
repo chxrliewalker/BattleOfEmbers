@@ -24,5 +24,10 @@ namespace BattleOfEmbers.BehaviourInterfaces
         void Attack(ICharacter character);
     }
 
+    public interface IHurtable
+    {
+        void ReduceDamage(float damage);
+    }
+
     
 }

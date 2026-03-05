@@ -5,14 +5,25 @@ using BattleOfEmbers.Core;
 using BattleOfEmbers.Events;
 using SplashKitSDK;
 using Auios.QuadTree;
+using System.ComponentModel;
 namespace BattleOfEmbers.Managers
 {
     
     public class CollisionManager
     {
-        private List<IAttackable> _attackableObjects;
-        private List<IDamageDealer> _attackerObjects;
+        private  _bounds;
+        private List<IHurtable> _hurtableObjects;
+        private List<IAttackable> _attackerObjects;
 
+        private protected CollisionManager(List<IHurtable> attackables, List<IAttackable> damageDealers)
+        {
+            _hurtableObjects = attackables; _attackerObjects = damageDealers;
+        }
+
+        public CollisionManager Instance(List<IHurtable> hurtables, List<IAttackable> attackables)
+        {
+            return new CollisionManager(hurtables, attackables);   
+        }
         public void CheckCollision(ICharacter obj, ICharacter objA)
         {
             if (SplashKit.SpriteCollision(obj.GetSprite, objA.GetSprite))
@@ -29,8 +40,6 @@ namespace BattleOfEmbers.Managers
 
         //How in the fuck do I code a quadtree in C# 
 
-    QuadTree<Vector2> quadTree = new Auios.QuadTree<Vector2>(800, 600);
-
-
+    Auios.QuadTree.QuadTree<Vector2> quadTree = new QuadTree<Vector2>(200, 200, new IQuadTreeObjectBounds<Vector2>(new Vector2(0, 0), new Vector2(200, 200)));
     }
 }
