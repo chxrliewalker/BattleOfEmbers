@@ -15,3 +15,4 @@ C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\refint\Bat
 C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\BattleOfEmbers.pdb
 C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\BattleOfEmbers.genruntimeconfig.cache
 C:\Users\Charl\Desktop\BattleOfEmbers\battleofembers\obj\Debug\net9.0\ref\BattleOfEmbers.dll
+C:\Users\Charl\Desktop\BattleOfEmbers\BattleOfEmbers\obj\Debug\net9.0\BattleOfEmbers.sourcelink.json

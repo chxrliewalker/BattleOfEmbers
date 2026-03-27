@@ -1,6 +1,7 @@
 using System.Reflection.Metadata;
 using BattleOfEmbers.Characters;
 using BattleOfEmbers.Core;
+using SplashKitSDK;
 namespace BattleOfEmbers.BehaviourInterfaces 
 {
     public interface IUsable
@@ -19,15 +20,16 @@ namespace BattleOfEmbers.BehaviourInterfaces
         float Damage {get; set;}
     }
 
-    public interface IAttackable
+    public interface IInteractable
+    {
+        Point2D Position {get;}
+    }
+    public interface IAttackable : IInteractable
     {
         void Attack(ICharacter character);
     }
-
-    public interface IHurtable
+    public interface IHurtable : IInteractable
     {
-        void ReduceDamage(float damage);
+        void ReduceHealth(float damage);
     }
-
-    
 }
