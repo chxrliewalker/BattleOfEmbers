@@ -95,9 +95,12 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\BattleOfEmbers\\BattleOfEmbers.csproj",
+      "projectUniqueName": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\BattleOfEmbers\\BattleOfEmbers.csproj",
       "projectName": "BattleOfEmbers",
       "projectPath": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\BattleOfEmbers\\BattleOfEmbers.csproj",
+      "projectPath": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\BattleOfEmbers\\BattleOfEmbers.csproj",
       "packagesPath": "C:\\Users\\Charl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\BattleOfEmbers\\obj\\",
       "outputPath": "C:\\Users\\Charl\\Desktop\\BattleOfEmbers\\BattleOfEmbers\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
