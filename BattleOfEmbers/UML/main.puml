@@ -1,0 +1,215 @@
+@startuml MainCustomProject
+
+' =========================
+' GAME FRAMEWORK
+' =========================
+package "Game Framework" {
+  class IdentifiableObject {
+    -_identifiers: List<string>
+    + AreYou(): bool
+    + FirstId(): string
+    + AddIdentifier(): string
+    + RemoveId(): string
+  }
+
+  class IGameObject {
+    + Name: string
+    + Description: string
+    + Position: Point2d
+    + IsActive: bool
+    + OnCollision<TEvent>(eventData: TEvent): void
+    + Update(deltaTime: float): void
+    + Draw(): void
+    + Interact<TEvent>(eventData: TEvent): void
+  }
+  IdentifiableObject o-- GameObjectBase
+  abstract class GameObjectBase {
+    - _name: string
+    - _description: string
+    - _position: Point2d
+    - _isActive: bool
+    - _identifiers: List<string>
+    - _spriteSheet: SpriteSheet
+    + Name: string
+    + Description: string
+    + Position: Point2d
+    + IsActive: bool
+  }
+
+  IGameObject <|.. GameObjectBase
+
+  class SpriteAnimator {
+    - frame: int
+    - _frameDuration: float
+    - _accumulatedET: float
+    - _framesInCycle: int
+    + Update(deltaTime: float): void
+    + CurrentFrame(): int
+  }
+
+  class SpriteSheet {
+    - _bitmap: Bitmap
+    - _frameWidth: int
+    - _frameHeight: int
+    - _framesPerRow: int
+    + SourceRect(frame: int): Rectangle
+  }
+
+  GameObjectBase o-- SpriteSheet
+}
+
+note right of SpriteAnimator
+  Update(): increments _accumulatedET
+  If _accumulatedET >= _frameDuration:
+    advance frame, subtract _frameDuration
+  CurrentFrame(): returns frame index for draw
+end note
+
+
+' =========================
+' EVENT SYSTEM
+' =========================
+package "Event System" {
+
+  interface IEventBus {
+    + Subscribe<TEvent>(handler: Action<TEvent>): void
+    + Unsubscribe<TEvent>(handler: Action<TEvent>): void
+    + Publish<TEvent>(eventData: TEvent): void
+  }
+
+  class EventBus {
+    - _handlers: Dictionary<Type, List<Delegate>>
+    + Subscribe<TEvent>(handler: Action<TEvent>): void
+    + Unsubscribe<TEvent>(handler: Action<TEvent>): void
+    + Publish<TEvent>(eventData: TEvent): void
+  }
+
+  EventBus ..|> IEventBus
+}
+
+
+' =========================
+' CHARACTER SYSTEM
+' =========================
+package "Character System" {
+
+  interface IAttackStrategy {
+    + Attack<TEvent>(eventData: TEvent): void
+  }
+
+  class MeleeAttack
+  class MagicAttack
+
+  IAttackStrategy <|.. MeleeAttack
+  IAttackStrategy <|.. MagicAttack
+
+  interface ICharacter {
+    + Move(): void
+    + Attack(): void
+    + Roll(): void
+    + UseItem(): void
+  }
+
+  IGameObject <|.. ICharacter
+
+  class PlayableCharacter {
+    -_health: float
+    - _attackPower: float
+    - _speed: float
+    - armour: float
+    - _spriteAnimator: SpriteAnimator
+    - _attackStrategy: IAttackStrategy
+    - _items: List<IItem>
+    + Move(): void
+    + Attack(): void
+    + Roll(): void
+    + UseItem(): void
+  }
+
+  class BossCharacter {
+    -_health: float
+    - _attackPower: float
+    - _rage: float
+    - _attackStrategy: IAttackStrategy
+    + Move(): void
+    + Attack(): void
+  }
+
+  class NPCCharacter {
+    + Move(): void
+  }
+
+  GameObjectBase <|-- PlayableCharacter
+  GameObjectBase <|-- BossCharacter
+  GameObjectBase <|-- NPCCharacter
+
+  ICharacter <|.. PlayableCharacter
+  ICharacter <|.. BossCharacter
+  ICharacter <|.. NPCCharacter
+
+  PlayableCharacter o-- SpriteAnimator
+  PlayableCharacter o-- IAttackStrategy
+  BossCharacter o-- IAttackStrategy
+
+  class CharacterFactory {
+    + CreateCharacter(type: CharacterType): ICharacter
+  }
+
+  CharacterFactory ..> PlayableCharacter : <<create>>
+  CharacterFactory ..> BossCharacter : <<create>>
+  CharacterFactory ..> NPCCharacter : <<create>>
+
+  ' Example: characters may publish events (dashed dependency)
+  PlayableCharacter ..> IEventBus : <<publish/subscribe>>
+  BossCharacter ..> IEventBus : <<publish/subscribe>>
+}
+
+
+' =========================
+' ITEM + DECORATOR SYSTEM
+' =========================
+package "Item System" {
+
+  interface IItem {
+    + Name: string
+    + Use(target: ICharacter): void
+  }
+
+  class Item {
+    - _name: string
+    - _attackStrategy: IAttackStrategy
+    + Name: string
+    + Use(target: ICharacter): void
+  }
+
+  IItem <|.. Item
+  Item o-- IAttackStrategy
+
+  class ItemFactory {
+    + CreateItem(type: ItemType): IItem
+  }
+
+  ItemFactory ..> Item : <<create>>
+}
+
+package "Decorator System" {
+
+  abstract class ItemDecorator
+  ItemDecorator ..|> IItem
+  ItemDecorator *-- IItem
+
+  class BurnDecorator
+  class OmnivampDecorator
+  class ElectricDecorator
+
+  ItemDecorator <|-- BurnDecorator
+  ItemDecorator <|-- OmnivampDecorator
+  ItemDecorator <|-- ElectricDecorator
+
+  ' Decorators may also publish effects (optional)
+  BurnDecorator ..> IEventBus : <<publish>>
+  OmnivampDecorator ..> IEventBus : <<publish>>
+  ElectricDecorator ..> IEventBus : <<publish>>
+}
+
+@enduml

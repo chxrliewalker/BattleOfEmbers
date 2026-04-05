@@ -14,22 +14,4 @@ namespace BattleOfEmbers.BehaviourInterfaces
         void Equip(GameObjectBase gameObject); 
         void Unequip(GameObjectBase gameObject);
     }
-
-    public interface IDamageDealer
-    {
-        float Damage {get; set;}
-    }
-
-    public interface IInteractable
-    {
-        Point2D Position {get;}
-    }
-    public interface IAttackable : IInteractable
-    {
-        void Attack(ICharacter character);
-    }
-    public interface IHurtable : IInteractable
-    {
-        void ReduceHealth(float damage);
-    }
 }
